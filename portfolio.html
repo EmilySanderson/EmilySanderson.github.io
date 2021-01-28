@@ -1,0 +1,204 @@
+<!--
+This is my Porfolio Page, with links to various projects, a slideshow and descriptions of various projects
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Icon --> <link rel="icon" type="image/png" href="pics/es.png">
+  <!-- CSS Links -->
+  <!-- Main CSS File --><link rel="stylesheet" type="text/css" href="styles/main.css" />
+  <!-- Google Dancing Script Font Link --><link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+  <!-- Google Lato Font Link --><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+  <!-- Font Awesome Link --> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+
+  <style>
+
+  * {
+  box-sizing: border-box;
+  }
+  #fancyname {font-family:'Dancing Script', cursive;}
+
+  .slideshowImg {
+    width: 100%;
+    height: 30vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #sudokyImg {
+    background-image: url(pics/sudoku.jpg);
+  }
+  #mapleImg {
+    background-image: url(pics/mapleleaf.png);
+    background-size: contain;
+    background-position: center;
+  }
+  #infiniteImg {
+    background-image: url(pics/infinitesets.png);
+    background-position: center;
+  }
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif; text-align: center;}
+  </style>
+
+  <link rel="stylesheet" href="styles/jumboslider.css" />
+  <script src="scripts/jquery.js"></script>
+  <script src="scripts/jquery.jumboslider.js"></script>
+  <style>
+  .jumboslider-arrows a svg {
+    fill : #9F496E;
+  }
+  .jumboslider-viewport {
+    background-color: #F2EBE5;
+  }
+  </style>
+  </head>
+
+  <body>
+<div class="content">
+  <!-- Header -->
+
+<div class="topnav">
+  <a href="index.html" id="fancyname">Emily Sanderson</a>
+  <!-- Mobile Menu Container -->
+  <div id="menu-links">
+    <a href="contact.html">Contact Me</a>
+    <a href="portfolio.html" id="portfolio"  class="active">Portfolio</a>
+    <a href="work.html">Work Experience</a>
+    <a href="education.html">Education and Skills</a>
+    <a href="index.html">Home</a>
+  </div>
+
+  <button id="icon"><i class="fas fa-bars"></i></button>
+</div>
+
+
+
+<!-- Portfolio  -->
+
+<h1> Portfolio of Projects </h1>
+<p> I am proud to show the projects that I have worked on in the past.
+  Most are from courses I have taken in my undergraduate degree,
+   and I hope they give you the opportunity to understand my skills and learn something new! Happy reading.
+</p>
+
+<!-- Alt Slideshow -->
+<div class="jumboslider">
+  <div class="jumboslider-viewport">
+    <div class="jumboslider-overview">
+      <div class="jumboslider-item" >
+        <h2> Sudoku Solver </h2>
+        <a href="#SudokuSolver"><h3>&#11182;For more information&#11183;</h3></a>
+        <div class="slideshowImg" id="sudokyImg">
+        </div>
+        <p style="font-size : xx-small;">
+          Image by <a href="https://pixabay.com/users/jeromeware-3174388/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4455317">JeromeWare <i class="fas fa-external-link-alt"></i></a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4455317">Pixabay <i class="fas fa-external-link-alt"></i></a>
+        </p>
+      </div>
+      <div class="jumboslider-item">
+        <h2> Infinite Sets Paper </h2>
+        <a href="#infinitePaper"><h3>&#11182;For more information&#11183;</h3></a>
+        <div class="slideshowImg" id="infiniteImg">
+          <!--<img src="pics/infinitesets.png" alt="Image of Mathematical Sentence used to Axiomatize the theory of Infinite Sets" width="75%"/>-->
+        </div>
+      </div>
+
+      <div class="jumboslider-item">
+        <h2> Statistics Canada Work Term Report </h2>
+        <a href="#statscanReport"><h3>&#11182;For more information&#11183;</h3></a>
+        <div class="slideshowImg" id="mapleImg">
+          <!--<img src="pics/mapleleaf.png" alt="Image of a Maple Leaf"/>-->
+        </div>
+        <p style="font-size : xx-small;">
+          Image by <a href="https://pixabay.com/users/gdakaska-1113303/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1674793">gdakaska</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1674793">Pixabay</a>
+        </p>
+      </div>
+
+      <div class="jumboslider-item">
+        <h2> BlackJack Game </h2>
+        <a href="#blackJackdescrip"><h3>&#11182;For more information&#11183;</h3></a>
+        <p style="font-size: 20vw; margin: auto;"> &spades; &hearts;  &diams;  &clubs; </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+$.jumboslider({
+  arrows: true,
+  pagination: true,
+  autoplay: 3000,
+  transition: 800
+});
+</script>
+
+<!-- GRID of projects -->
+
+<div class="row">
+  <div class="column">
+    <div class="card" id="SudokuSolver">
+      <!-- Sudoku Solver Project -->
+      <h2> Sudoku Solver </h2>
+      <div  class="description">
+        <h3><a href="projects/SudokuSolver.html">View Code</a></h3>
+        <p>This project, written in the programming language Python, was developed as a part of a course I attended to learn the language.
+           Of all the assignments, this one was one of the most exciting, where I was able to create something that I could use next time I would solve a puzzle.
+           I can provide a copy of the Jupyter Notebook if you would like to test it out for yourself!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card" id="infinitePaper">
+      <!-- Math Report project -->
+      <h2> Infinite Sets Paper </h2>
+      <div class="description">
+        <h3><a  href="projects/Infinite_Sets.pdf">View Paper</a> </h3>
+        <p>This short essay was a review of a topic of Infinite Sets from a reading course I took on predicate and propositional calculus,
+          a branch of Mathematics concerning formal logic and proving statements.
+          <a href="https://www.springer.com/gp/book/9781852339210#aboutBook" onclick="window.open('https://www.springer.com/gp/book/9781852339210#aboutBook','lin','location=yes,scrollbars=yes,menubar=yes,resizable=yes,toolbar=yes,status=yes,dependent=yes,width=900,height=600');return false;" target="_blank">This online textbook <i class="fas fa-external-link-alt"></i></a> was the basis of this class.
+        </p>
+      </div>
+  </div>
+  </div>
+</div>
+<div class="row">
+  <div class="column">
+    <div class="card" id="statscanReport">
+      <!-- Stats Can Report -->
+      <h2> Statistics Canada Work Term Report </h2>
+      <div class="description">
+        <h3><a href="projects/Emily_Sanderson_STATSCAN_Report.pdf">View Report</a> </h3>
+        <p>This report details the research results of my work at Statistics Canada during my four month work term.
+          I performed research on the <a href="https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&SDDS=3226" onclick="window.open('https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&SDDS=3226','lin','location=yes,scrollbars=yes,menubar=yes,resizable=yes,toolbar=yes,status=yes,dependent=yes,width=900,height=600');return false;" target="_blank">
+        Canadian Community Health Survey <i class="fas fa-external-link-alt"></i></a> where I was analyzing the impacts of change in the calibration strategy for the group of persons aged 65 and over.
+          </p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card" id=blackJackdescrip>
+      <!-- Fourth Projects -->
+      <h2> BlackJack Game </h2>
+      <a class="projectLinks" href="#blackJackdescrip"><h3>&#11182;For more information&#11183;</h3></a>
+      <div class="description">
+        <h3><a href="blackjack.html">Start Game</a></h3>
+        <p>A little game made using JavaScript, HTML and CSS.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<footer class="footer">
+  <label for="dark_mode_button">Dark Mode Button</label>
+  <button id="dark_mode_button" onclick="colourFlip()"><i class="fas fa-adjust"></i></button>
+</footer>
+<!-- JavaScript Link -->
+<script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!--
+Contact Me page, with links to my email, LinkedIN profile and a contact me form that is saved on the server
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+    <!-- Icon --> <link rel="icon" type="image/png" href="pics/es.png">
+  <!-- CSS Links -->
+  <!-- Main CSS File --><link rel="stylesheet" type="text/css" href="styles/main.css" />
+  <!-- Forms CSS File --> <link rel="stylesheet" type="text/css" href="styles/forms.css" />
+  <!-- Google Dancing Script Font Link --><link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+  <!-- Google Lato Font Link --><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+  <!-- Font Awesome Link --> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+
+  <style>
+    #fancyname {font-family:'Dancing Script', cursive;
+    }
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+  </style>
+  <!-- JavaScript Link -->
+  <script src="scripts/jquery.js"></script>
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</head>
+
+<body>
+
+<div class="content">
+
+  <!-- Top navigation-->
+
+  <div class="topnav">
+    <a href="index.html" id="fancyname">Emily Sanderson</a>
+    <!-- Mobile Menu Container -->
+    <div id="menu-links">
+      <a href="contact.html" class="active">Contact Me</a>
+      <a href="portfolio.html" id="portfolio">Portfolio</a>
+      <a href="work.html">Work Experience</a>
+      <a href="education.html">Education and Skills</a>
+      <a href="index.html" >Home</a>
+    </div>
+
+    <button id="icon"><i class="fas fa-bars"></i></button>
+  </div>
+
+<!-- Contact blurb -->
+
+<h1> Contact Me </h1>
+
+<p> Feel free to send me a message on <a href="https://www.linkedin.com/in/emily-sanderson/" onclick="window.open('https://www.linkedin.com/in/emily-sanderson/','lin','location=yes,scrollbars=yes,menubar=yes,resizable=yes,toolbar=yes,status=yes,dependent=yes,width=900,height=600');return false;" target="_blank">LinkedIn</a> or by leaving a message below!
+
+</p>
+
+<!-- Contact Me Form -->
+<h2>Contact Form</h2>
+
+<div class="form_container">
+  <form action="https://mailthis.to/emilysa13" method="POST" encType="multipart/form-data">
+
+    <label for="name">Your Name:</label> <br>
+    <input type="text" name="name_" id="name" placeholder="Your name" required>
+
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email_" placeholder="Your Email Address">
+
+    <!-- Phone Number -->
+    <label for="phone">Phone (optional):</label><br>
+    <input type="text" id="phone" name="phone" placeholder="255-555-5555">
+
+    <label for="msg">Message (max 1000 characters):</label><br>
+    <textarea id="msg" name="msg_" maxlength="1000" placeholder="Enter Message Here" required></textarea> <br>
+    <input type="hidden" name="_subject" value="Contact form submitted">
+    <input type="submit" value="Submit" id="submit-btn"/>
+
+  </form>
+</div>
+
+<!-- LinkedIn Badge -->
+<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="emily-sanderson"><a class="LI-simple-link" href='https://ca.linkedin.com/in/emily-sanderson?trk=profile-badge'>Emily Sanderson LinkedIn</a></div>
+
+</div>
+<footer class="footer">
+<label for="dark_mode_button">Dark Mode Button</label>
+  <button id="dark_mode_button" onclick="colourFlip()"><i class="fas fa-adjust"></i></button>
+</footer>
+<script src="scripts/form_validation.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+</html>

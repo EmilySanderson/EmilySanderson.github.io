@@ -1,0 +1,72 @@
+/**
+
+* The following code is to increase the size of the headers/text on the home page while centering it and the image
+
+* Code for someFunction adapted from https://www.w3schools.com/howto/howto_css_image_center.asp
+
+* Accessed: 22 August 2020
+
+*/
+
+
+
+.homepage {
+display: flex;
+flex-wrap: wrap;
+}
+
+.homepage-content {
+ flex: 70%;
+}
+
+.homepage img {
+        flex: 30%;
+        object-fit: contain;
+        align-self: center;
+}
+.homepage p {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  text-align: center;
+  font-size: 2vw;
+}
+.homepage h1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  text-align: center;
+  font-size: 5vw;
+}
+@media screen and (max-width: 784px) {
+  .homepage {
+    flex-direction: column;
+  }
+  .homepage img {
+    flex: none;
+        object-fit: contain;
+        align-self: center;
+}
+.homepage-content {
+  flex: none;
+}
+
+  .homepage p {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    text-align: center;
+    font-size: 15px;
+  }
+  .homepage h1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    text-align: center;
+    font-size: 25px;
+  }
+}

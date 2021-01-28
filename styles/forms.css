@@ -1,0 +1,51 @@
+/*
+
+* This is used to format the html form.
+
+* Code amended from https://www.w3schools.com/css/css_form.asp, accessed on August 24th, 2020
+
+*/
+body {
+    text-align: center;
+}
+form {
+    display: inline-block;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+
+
+input[type=submit] {
+  background-color: #9F496E;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #2B262D;
+}
+
+.container {
+
+  width: 75%;
+  margin:auto;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}

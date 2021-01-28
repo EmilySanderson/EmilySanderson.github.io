@@ -1,0 +1,126 @@
+<!--
+This is my BlackJack Game page
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BlackJack</title>
+  <!-- Icon --> <link rel="icon" type="image/png" href="pics/es.png">
+<!-- CSS Links -->
+<!-- Main CSS File --><link rel="stylesheet" type="text/css" href="styles/main.css" />
+<!-- Google Dancing Script Font Link --><link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+<!-- Google Lato Font Link --><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+<!-- Font Awesome Link --> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+
+<!--Adding some small, page specific formatting that is not worth making another css file for "-->
+<style>
+  /* Change font of fancyname and text */
+#fancyname {font-family:'Dancing Script', cursive;}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+
+* {
+  box-sizing: border-box;
+}
+.blackjackButton {
+  background-color: #2B262D;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25px;
+  width: 33%;
+}
+
+.mat {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+.cardArea {
+  font-size: 10em;
+}
+
+.red {
+  color: #D12D36;
+}
+
+#gameArea:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* make the buttons stacked and as wide as the screen on smaller mobile screens */
+@media screen and (max-width: 650px){
+  .blackjackButton {
+    width: 100%;
+  }
+}
+</style>
+
+<!-- JavaScript Link -->
+<script src="scripts/jquery.js"></script>
+</head>
+
+<body>
+
+<div class="content">
+  <!-- Header -->
+
+  <div class="topnav">
+    <a href="index.html" id="fancyname">Emily Sanderson</a>
+    <!-- Mobile Menu Container -->
+    <div id="menu-links">
+      <a href="contact.html">Contact Me</a>
+      <a href="portfolio.html" class="active" id="portfolio">Portfolio</a>
+      <a href="work.html">Work Experience</a>
+      <a href="education.html">Education and Skills</a>
+      <a href="index.html" >Home</a>
+    </div>
+
+    <button id="icon"><i class="fas fa-bars"></i></button>
+  </div>
+<!-- Content -->
+
+<div id="BJintro" style="text-align: center;">
+  <h1>BlackJack</h1>
+  <h2><a href="https://bicyclecards.com/how-to-play/blackjack/">How to play (minus the gambling part)</a></h2>
+  <button type="button" class="blackjackButton" id="beginGameBtn" onclick="createTable()">Click Here to begin!</button>
+</div>
+
+<div id="gameArea" style="display : none;">
+  <button type="button" class="blackjackButton" id="dealHandsBtn" onclick="dealHands()">New Game</button>
+  <button type="button" class="blackjackButton" id="hitMeBtn" onclick="hitMe()">Hit Me</button>
+  <button type="button" class="blackjackButton" id="stayBtn" onclick="stay()">Stay</button>
+  <div id="playerOne" class="mat">
+    <h3>Player One</h3>
+    <h2 class="value">0
+    </h2>
+    <div class="cardArea">
+    </div>
+  </div>
+    <div id="houseArea" class="mat">
+      <h3>The House</h3>
+      <h2 class="value">0
+      </h2>
+      <div class="cardArea">
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <label for="dark_mode_button">Dark Mode Button</label>
+  <button type="button" id="dark_mode_button" onclick="colourFlip()"><i class="fas fa-adjust"></i></button>
+</footer>
+<script src="scripts/main.js"></script>
+<script src="scripts/blackjack.js"></script>
+</body>
+</html>

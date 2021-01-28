@@ -1,0 +1,191 @@
+<!--
+This is the education and skills page.
+It is pretty much my resume on a website for now.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education</title>
+  <!-- Icon --> <link rel="icon" type="image/png" href="pics/es.png">
+<!-- CSS Links -->
+<!-- Main CSS File --><link rel="stylesheet" type="text/css" href="styles/main.css" />
+<!-- Google Dancing Script Font Link --><link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+<!-- Google Lato Font Link --><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+<!-- Font Awesome Link --> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+
+<!--Adding some small, page specific formatting that is not worth making another css file for "-->
+<style>
+  /* Change font of fancyname and text */
+#fancyname {font-family:'Dancing Script', cursive;}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+
+/* To make two columns on this page for larger sized screens */
+#Education {
+  width: 50%;
+  float: left;
+  padding: 15px;
+}
+#Skills {
+  width: 50%;
+  float: left;
+  padding: 15px;
+}
+.content:after {  /* to ensure that the footer is not affected by the float */
+  content: "";
+  display: table;
+  clear: both;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* For small screens */
+@media screen and (max-width: 784px) {
+/* collapse columns on education page */
+  #Education {
+    width:100%;
+  }
+  #Skills {
+    width:100%;
+    text-align: left;
+  }
+}
+</style>
+
+<!-- JavaScript Link -->
+<script src="scripts/jquery.js"></script>
+
+</head>
+
+<body>
+
+<div class="content">
+
+  <!-- Header -->
+
+  <div class="topnav">
+    <a href="index.html" id="fancyname">Emily Sanderson</a>
+    <!-- Mobile Menu Container -->
+    <div id="menu-links">
+      <a href="contact.html">Contact Me</a>
+      <a href="portfolio.html" id="portfolio">Portfolio</a>
+      <a href="work.html">Work Experience</a>
+      <a href="education.html" class="active">Education and Skills</a>
+      <a href="index.html" >Home</a>
+    </div>
+
+    <button id="icon"><i class="fas fa-bars"></i></button>
+  </div>
+
+<div class="content">
+<!-- Education Section -->
+<div id="Education">
+<h1> Education </h1>
+
+<p>
+<strong> Honours Mathematics and Statistics - Statistics Sub-Plan CO-OP (B.Sc.) </strong> <br>
+Class of 2021 <br>
+McMaster University, Hamilton, ON <br>
+GPA: 9.91 in the 12-Point scale, B+ or 3.6 in the 4-point scale <br>
+</p>
+
+<!-- Courses table-->
+
+<table style="text-align:center;" id="indextable">
+  <caption>Recent Courses of Instruction</caption>
+  <thead>
+  <tr>
+    <th><a href="javascript:SortTable(0,'T');">Course</a></th>
+    <th><a href="javascript:SortTable(1,'T');">Description</a></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>MATH 4MB3</td>
+    <td>Mathematical Biology</td>
+  </tr>
+  <tr>
+    <td>MATH 3MB3</td>
+    <td>Introduction To Modelling</td>
+  </tr>
+  <tr>
+    <td>COMPSCI 3DB3</td>
+    <td>Databases</td>
+  </tr>
+  <tr>
+    <td>MATH 4L03</td>
+    <td>Intro:Math Logic</td>
+  </tr>
+  <tr>
+    <td>COMPSCI 2S03</td>
+    <td>Principles Of Programming (JAVA)</td>
+  </tr>
+  <tr>
+    <td>STATS 3DS3</td>
+    <td>Intro to Data Science Theory</td>
+  </tr>
+  <tr>
+    <td>MATH 3X03</td>
+    <td>Complex Analysis I</td>
+  </tr>
+  <tr>
+    <td>STATS 4I03</td>
+    <td>Inference</td>
+  </tr>
+  <tr>
+    <td>STATS 4A03</td>
+    <td>Time Series</td>
+  </tr>
+  <tr>
+    <td>STATS 3S03</td>
+    <td>Survey Sampling</td>
+  </tr>
+  <tr>
+    <td>COMPSCI 1MD3</td>
+    <td>Introduction To Programming</td>
+  </tr>
+  <tr>
+    <td>COMP 266</td>
+    <td>Introduction to Web Programming - Athabasca University</td>
+  </tr>
+  </tbody>
+</table>
+
+</div>
+<!-- Skills Section -->
+
+<div id="Skills">
+<h1> Skills </h1>
+<ul>
+  <li> I have experience with the following computer programming languages:
+    <ul>
+      <li> HTML
+      <li> Python
+      <li> R Studio
+      <li> Java
+      <li> SAS
+      <li> Excel VBA
+      <li> SQL
+    </ul>
+  <li>	Passionate about collaboration and working with a team to attain a common goal
+  <li>	Communication skills developed through written reports and oral presentations
+  <li>	Strong research skills advanced through an ambitious and self-driven personality
+  <li>	Excels in an entrepreneurial, fast-paced environment
+  <li>	Creative and analytical thinking acquired through class assignments and computer programming
+  <li>	Moderate level French with international DELF language certification
+</ul>
+
+</div>
+</div>
+
+</div>
+<footer class="footer">
+  <label for="dark_mode_button">Dark Mode Button</label>
+  <button id="dark_mode_button" onclick="colourFlip()"><i class="fas fa-adjust"></i></button>
+</footer>
+<script src="scripts/main.js"></script>
+</body>
+</html>

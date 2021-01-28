@@ -1,30 +1,271 @@
+<!--
+Home page, with a blurb about who I am.
+-->
+
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Emily Sanderson</title>
-		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Emily Sanderson!</h1>
-				<p>I'm best known as the Emily from McMaster. <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:sanderse@mcmaster.com">email</a></li>
-        		<li><a href="https://github.com/EmilySanderson">github.com/EmilySanderson</a></li>
-			</ul>
-		</footer>
-	</body>
+<html lang="en">
+<head>
+<!-- Title -->
+<title>Welcome | Emily Sanderson</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Icon --> <link rel="icon" type="image/png" href="pics/es.png">
+<!-- CSS Links -->
+<!-- Main CSS File --><link rel="stylesheet" type="text/css" href="styles/main.css" />
+<!-- CSS File just for this page --><link rel="stylesheet" type="text/css" href="styles/homepage.css" />
+<!-- Google Dancing Script Font Link --><link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+<!-- Google Lato Font Link --><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+<!-- Font Awesome Link --> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+
+<style>
+  /* Change font of fancyname and text */
+#fancyname {font-family:'Dancing Script', cursive;}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+
+.button {
+  background-color: #2B262D;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.funThing {
+  float: left;
+  width: 30%;
+  margin: 0% 1.66%
+}
+
+.funThings:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 784px) {
+  .funThing {
+    width: 100%;
+  }
+}
+
+td {
+  font-size: 2vw
+}
+
+select {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  color: #F2EBE5;
+  border-radius: 25px;
+  background-color: #2B262D;
+}
+
+.JSONImages img, video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<!-- JavaScript Link -->
+<script src="scripts/jquery.js"></script>
+</head>
+
+<body>
+
+<div class="content">
+<!-- Header -->
+
+<div class="topnav">
+  <a href="index.html" id="fancyname">Emily Sanderson</a>
+  <!-- Mobile Menu Container -->
+  <div id="menu-links">
+    <a href="contact.html">Contact Me</a>
+    <a href="portfolio.html" id="portfolio">Portfolio</a>
+    <a href="work.html">Work Experience</a>
+    <a href="education.html">Education and Skills</a>
+    <a href="index.html" class="active">Home</a>
+  </div>
+
+  <button id="icon"><i class="fas fa-bars"></i></button>
+</div>
+
+<!-- Intro blurb with photo -->
+
+
+<div class="homepage">
+  <img src="pics/pic_nobackground.png"  alt="A picture of Emily Sanderson"/>
+  <div class="homepage-content">
+    <h1>
+    My name is Emily Sanderson, and I am excited to introduce you to my site!
+    </h1>
+
+    <p>
+    Here is a little about who I am, what I can do and how you can get in contact with me!
+    I hope this site will be a good introduction and will allow you to get the best understanding of who I am professionally and personally.
+    </p>
+    <p>
+    Cheers!
+    </p>
+    <p>
+    Emily
+  </p>
+  </div>
+</div>
+
+<h1>Me, on a personal note</h1>
+<div class="funThings">
+<div class="funThing">
+  <h2>I love cats & dogs!</h2>
+  <select id="select_animal" onchange="select_animal(this.value)">
+    <option value="">Cat or dog images?</option>
+    <option value="cats">Cat Images</option>
+    <option value="dogs">Dog Images</option>
+  </select>
+  <div id="cats" class = "JSONImages" style="display: none;">
+    <button class="button" onclick="showCats()" style="width: 100%;" >
+      Click Here for cat pictures!
+    </button>
+    <img id="catImage" style="max-width: 100%;" alt="Cat Picture" src="https://placekitten.com/300/300">
+  </div>
+  <div id="dogs" style="display: none;">
+    <button class="button" onclick="showDogs()" style="width: 100%;">
+      Click Here for dog pictures!
+    </button>
+    <div id = "dog_IMG_VID" class = "JSONImages">
+    </div>
+  </div>
+</div>
+
+
+<div class="funThing twitter">
+  <h2>Visit my Twitter Page!</h2>
+  <div  style="border-radius: 25px; height: 600px;  overflow-x: hidden; overflow-y: scroll;">
+    <a class="twitter-timeline" href="https://twitter.com/That_Sanderson?ref_src=twsrc%5Etfw">Tweets by That_Sanderson</a>
+  </div>
+</div>
+
+<div class="funThing" id="jeopardy">
+<table id="jeopardyTable" style="table-layout: fixed; width: 100%;">
+    <caption><h2>Jeopardy Clues!</h2>
+      <button type="button" name="jeopardyReveal" class="button" onclick="revealAnswer()">Click here to reveal answer!</button>
+      <button type="button" name="jeopardyNew" class="button" onclick="showJeopardy()" style="display: none;">Click here for a new clue!</button>
+    </caption>
+    <tbody>
+      <tr>
+        <td>Categories:</td>
+        <td style="text-transform: capitalize;"></td>
+      </tr>
+      <tr>
+        <td>Value:</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Clue:</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Answer:</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+<script async src="https://platform.twitter.com/widgets.js"></script>
+<script>
+/* This code is comprised a three sections:
+ * 1. Cat images
+ *    To call a new image from an external site using XML & JSON manipulation
+ * 2. Dog Images
+ *    To call a new image or video from an external site using XML & JSON manipulation
+ * 3. Jeopardy Answers & clues
+ *    Call a new JSON element that contains a given Clue and its properties.
+*/
+
+/* Display cat pictures in button */
+function select_animal(sel) {
+  if (sel == "cats") {
+    $("#dogs").hide();
+    $("#cats").show();
+    showCats();
+  } else if (sel == "dogs") {
+    $("#dogs").show();
+    $("#cats").hide();
+    showDogs();
+  }
+}
+/*Display Cat Picture */
+function showCats() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      document.getElementById("catImage").src = myObj.file;
+    }
+  };
+  xmlhttp.open("GET", "https://aws.random.cat/meow", true);
+  xmlhttp.send();
+}
+/* Display Dog Picture */
+function showDogs() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      if (myObj.url.substring(myObj.url.length - 4) == ".mp4") {
+        $("#dog_IMG_VID").html('<video style="max-width: 100%;" src='+myObj.url+' autoplay type="video/mp4">Your browser does not support video, click again</video>');
+      } else {
+        $("#dog_IMG_VID").html('<img id="dogImage" style="max-width: 100%;" alt="Dog Picture" src='+myObj.url+'></img>');
+      }
+    }
+  };
+  xmlhttp.open("GET", "https://random.dog/woof.json", true);
+  xmlhttp.send();
+}
+
+/* Jeopardy Clues & Answers Table */
+var answer;
+var table;
+showJeopardy(); //Show first clue when page loads
+/* Calls for JSON array with Jeopardy clue information, then updates table */
+function showJeopardy() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      table = $("#jeopardyTable")[0];
+      table.rows[0].cells[1].innerHTML = myObj[0].category.title; //Category
+      table.rows[1].cells[1].innerHTML = "$" + myObj[0].value;    //Dollar Value
+      table.rows[2].cells[1].innerHTML = myObj[0].question;       //Clue
+      table.rows[3].cells[1].innerHTML = "";                      //Leave Answer Blank
+      $("button[name='jeopardyNew']").hide();                     //New clue button
+      $("button[name='jeopardyReveal']").show();                   //Reveal Answer Button
+      answer = myObj[0].answer;                                   //Clue 'answer'
+    }
+  };
+  xmlhttp.open("GET", "http://jservice.io/api/random", true);
+  xmlhttp.send();
+}
+/* Display Answer in table */
+function revealAnswer() {
+  table.rows[3].cells[1].innerHTML = answer;
+  //Swap the button that is displayed
+  $("button[name='jeopardyNew']").show();
+  $("button[name='jeopardyReveal']").hide();
+}
+</script>
+
+</div> <!-- content -->
+<footer class="footer">
+<label for="dark_mode_button">Dark Mode Button</label>
+<button id="dark_mode_button" onclick="colourFlip()"><i class="fas fa-adjust"></i></button>
+</footer>
+<script src="scripts/main.js"></script>
+</body>
 </html>

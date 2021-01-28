@@ -1,0 +1,85 @@
+<!--
+Work Experience Page, from my resume, with links to projects on portfolio if applicable.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work</title>
+    <!-- Icon --> <link rel="icon" type="image/png" href="pics/es.png">
+  <!-- CSS Links -->
+  <!-- Main CSS File --><link rel="stylesheet" type="text/css" href="styles/main.css" />
+  <!-- Google Dancing Script Font Link --><link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+  <!-- Google Lato Font Link --><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+  <!-- Font Awesome Link --> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+
+  <style>
+  #fancyname {font-family:'Dancing Script', cursive;
+  }
+  body,h1,h2,h3,h4,h5,h6, p{font-family: "Lato", sans-serif; text-align: left;}
+  </style>
+  <!-- JavaScript Link -->
+  <script src="scripts/jquery.js"></script>
+  </head>
+
+  <body>
+<div class="content">
+      <!-- Header -->
+
+<div class="topnav">
+  <a href="index.html" id="fancyname">Emily Sanderson</a>
+  <!-- Mobile Menu Container -->
+  <div id="menu-links">
+    <a href="contact.html">Contact Me</a>
+    <a href="portfolio.html" id="portfolio">Portfolio</a>
+    <a href="work.html"  class="active">Work Experience</a>
+    <a href="education.html">Education and Skills</a>
+    <a href="index.html" >Home</a>
+  </div>
+
+  <button id="icon"><i class="fas fa-bars"></i></button>
+</div>
+
+
+  <img src="pics/pic_winecheese1.png" alt="A picture of Emily Sanderson" class="responsive floatpic"/>
+<!-- Work Experience Section -->
+  <h1> Work Experience </h1>
+
+  <h2>RBC Investor & Treasury Services</h2>
+  <h3>Due Diligence Summer Intern</h3>
+  <h4>May 2019 - August 2019
+    Toronto, Ontario</h4>
+  <p>
+    Challenged the status quo with the development of Excel VBA macros thatautomated over 85% of an otherwise time-consuming task.
+    This program wasdeveloped by working in conjunction with those who would eventually use it,leading to a process that would be implemented.
+    Performed due diligence exercises on new clients, ensuring that all regulatoryand compliance standards were met, which required strong research andinterpersonal skills.
+  </p>
+
+    <h2>Statistics Canada</h2>
+    <h3>Methodology Student</h3>
+    <h4>January 2019 - April 2019
+    Ottawa, Ontario</h4>
+  <p>
+    Working on a project to recalibrate the age intervals on the CanadianCommunity Health Survey.
+    Using SAS, I will redefine the age interval of 65+ into smaller intervals to better represent the diverse aging population using various statistical methods.
+    <a href="portfolio.html#statcan">Go to my work term report</a>.
+  </p>
+    <h2>The Elliott Community</h2>
+    <h3>Student Dietary Aide</h3>
+    <h4>May 2016 - December 2018
+    Guelph, Ontario</h4>
+  <p>
+    Prepared and served meals while paying great attention to the senior’s dietaryrestrictions.
+    This required efficiency, accuracy and interpersonal skills to notonly serve them properly but to form a strong rapport to help the residents feelmore at home.
+  </p>
+</div>
+<footer class="footer">
+  <label for="dark_mode_button">Dark Mode Button</label>
+  <button style="float: right;" id="dark_mode_button" onclick="colourFlip()"><i class="fas fa-adjust"></i></button>
+</footer>
+
+<script src="scripts/main.js"></script>
+  </body>
+  </html>

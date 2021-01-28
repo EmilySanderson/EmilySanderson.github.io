@@ -1,0 +1,207 @@
+/*!
+ jQuery JumboSlider Plugin v1.5.0
+ https://jumboslider.metodiev.dev
+
+ Copyright (c) 2020 Martin Metodiev
+ Licensed under the MIT license.
+*/
+
+.jumboslider {
+  position: relative;
+  height: 100%;
+}
+
+.jumboslider:focus {
+  outline: none;
+}
+
+.jumboslider-viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.jumboslider-overview {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  min-width: 100%;
+}
+
+.jumboslider-item {
+  float: left;
+  max-width: 100%;
+  opacity: 0;
+}
+
+.jumboslider-item:not(:last-of-type) {
+  margin-right: 1px;
+}
+
+.jumboslider-ready .jumboslider-item {
+  opacity: 1;
+}
+
+.jumboslider-arrows {
+  opacity: 0;
+}
+
+.jumboslider-arrows a {
+  -webkit-transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  display: block;
+  width: 10%;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  background-color: transparent;
+  opacity: 0;
+}
+
+.jumboslider-arrows a svg {
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
+
+.jumboslider-arrows a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.jumboslider-arrows a.jumboslider-prev-arrow {
+  left: 0;
+}
+
+.jumboslider-arrows a.jumboslider-next-arrow {
+  right: 0;
+}
+
+.jumboslider-arrows a::after {
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  opacity: .8;
+}
+
+.jumboslider-arrows a:hover::after {
+  opacity: 1;
+}
+
+.jumboslider-arrows a.hidden-arrow {
+  display: none;
+}
+
+.jumboslider-arrowed:hover .jumboslider-arrows a {
+  opacity: 1;
+}
+
+.jumboslider-pagination {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  font-size: 0;
+  text-align: center;
+  opacity: 0;
+}
+
+.jumboslider-pagination .holder {
+  position: relative;
+  display: inline-block;
+  height: 14px;
+  margin-top: 20px;
+  margin-left: 1px;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+.jumboslider-pagination a {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  width: 30px;
+  height: 16px;
+  margin: -1px -1px 0;
+  overflow: hidden;
+  text-decoration: none;
+  border-right: 4px solid #fff;
+  border-left: 4px solid #fff;
+}
+
+.jumboslider-pagination a:hover:not(.current)::after {
+  background-color: rgba(51, 102, 204, 0.75);
+}
+
+.jumboslider-pagination a:active:not(.current)::after {
+  background-color: #3366cc;
+}
+
+.jumboslider-pagination a::after {
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 1px;
+  z-index: 1;
+  width: calc(100% - 2px);
+  height: 100%;
+  content: '';
+}
+
+.jumboslider-pagination a .dot {
+  position: relative;
+  z-index: 2;
+  display: block;
+  height: 100%;
+  background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGNsYXNzPSJqdW1ib3NsaWRlci1wYWdpbmF0aW9uLW1hc2siIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA4OCA2NCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgODggNjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTAsMHY2NGg4OFYwSDB6IE00NCw1OGMtMTQuMywgMC0yNi0xMS42LTI2LTI2UzI5LjcsNiw0NCw2czI2LDExLjYsMjYsMjZTNTguMyw1OCw0NCw1OHoiLz48L3N2Zz4=) no-repeat center;
+}
+
+.jumboslider-pagination a.current {
+  cursor: default;
+}
+
+.jumboslider-pagination .jumboslider-pagination-current {
+  position: absolute;
+  top: -1px;
+  z-index: 1;
+  width: 30px;
+  height: 16px;
+  text-align: center;
+  cursor: default;
+}
+
+.jumboslider-pagination .jumboslider-pagination-current::after {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-color: #999;
+  content: '';
+}
+
+.jumboslider.jumboslider-paginated {
+  margin-bottom: 50px;
+}
