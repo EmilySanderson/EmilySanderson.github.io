@@ -122,7 +122,7 @@ select {
 <div class="funThing">
   <h2>I love cats & dogs!</h2>
   <select id="select_animal" onchange="select_animal(this.value)">
-    <option value="">Cat or dog images?</option>
+    <option value="">Select Animal Image</option>
     <option value="cats">Cat Images</option>
     <option value="dogs">Dog Images</option>
   </select>
@@ -137,6 +137,7 @@ select {
       Click Here for dog pictures!
     </button>
     <div id = "dog_IMG_VID" class = "JSONImages">
+       <img id="dogImage" style="max-width: 100%;" alt="Picture of Daisy, the dog" src="pics/daisy.jpg">
     </div>
   </div>
 </div>
@@ -193,11 +194,11 @@ function select_animal(sel) {
   if (sel == "cats") {
     $("#dogs").hide();
     $("#cats").show();
-    showCats();
+//     showCats();
   } else if (sel == "dogs") {
     $("#dogs").show();
     $("#cats").hide();
-    showDogs();
+//     showDogs();
   }
 }
 /*Display Cat Picture */
