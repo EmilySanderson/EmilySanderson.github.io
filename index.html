@@ -130,14 +130,14 @@ select {
     <button class="button" onclick="showCats()" style="width: 100%;" >
       Click Here for cat pictures!
     </button>
-    <img id="catImage" style="max-width: 100%;" alt="Cat Picture" src="https://placekitten.com/300/300">
+    <img id="catImage" style="max-width: 100%; border-radius: 25px;" alt="Cat Picture" src="https://placekitten.com/300/300">
   </div>
   <div id="dogs" style="display: none;">
     <button class="button" onclick="showDogs()" style="width: 100%;">
       Click Here for dog pictures!
     </button>
     <div id = "dog_IMG_VID" class = "JSONImages">
-       <img id="dogImage" style="max-width: 100%;" alt="Picture of Daisy, the dog" src="pics/daisy.jpg">
+       <img id="dogImage" style="max-width: 100%; border-radius: 25px;" alt="Picture of Daisy, the dog" src="pics/daisy.jpg">
     </div>
   </div>
 </div>
@@ -220,9 +220,9 @@ function showDogs() {
     if (this.readyState == 4 && this.status == 200) {
       var myObj = JSON.parse(this.responseText);
       if (myObj.url.substring(myObj.url.length - 4) == ".mp4") {
-        $("#dog_IMG_VID").html('<video style="max-width: 100%;" src='+myObj.url+' autoplay type="video/mp4">Your browser does not support video, click again</video>');
+        $("#dog_IMG_VID").html('<video style="max-width: 100%; border-radius: 25px;" src='+myObj.url+' autoplay type="video/mp4">Your browser does not support video, click again</video>');
       } else {
-        $("#dog_IMG_VID").html('<img id="dogImage" style="max-width: 100%;" alt="Dog Picture" src='+myObj.url+'></img>');
+        $("#dog_IMG_VID").html('<img id="dogImage" style="max-width: 100%; border-radius: 25px;" alt="Dog Picture" src='+myObj.url+'></img>');
       }
     }
   };
